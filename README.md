@@ -5,14 +5,6 @@
 ![iuricode](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![iuricode](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-## Conteúdos
-- [Introdução](#Introdução)
-- [Estrutura do projeto](#Estrutura)
-- [Arquitetura](#Arquitetura)
-- [Instalação](#installation)
-- [Utilização](#Utilização)
-- [Times](#Times)
-
 ## Introdução
 Este desafio tem como objetivo criar uma Wishlist para o cliente.
 
