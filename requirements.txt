@@ -1,0 +1,6 @@
+fastapi[all]
+sqlalchemy
+asyncpg
+pytz
+requests
+python-jose

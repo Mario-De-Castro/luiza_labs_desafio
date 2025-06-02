@@ -1,0 +1,32 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table clients {
+  id integer [primary key, note: 'Identificador unico da tabela']
+  email string [note: 'Email do cliente cadastrado']
+  name string [note: 'Nome do cliente']
+  created_at timestamp [note: 'Data da criação do registro']
+  updated_at timestamp [note: 'Data da atualização do registro']
+
+  Indexes {
+    (email) [name: 'idx_email']
+    id [unique]
+  }
+}
+
+Table wishlist {
+  wishlist_id integer [primary key, note: 'Identificador unico da tabela']
+  client_id int [note: 'Identificador unico do cliente']
+  product_id int [note: 'Identificador unico do produto']
+  product_info varchar [note: 'Dicionario contendo informações com relação ao produto']
+  created_at timestamp [note: 'Data da criação do registro']
+
+  Indexes {
+    (client_id, product_id) [name:"idx_product_client"]
+    (product_id) [name: 'idx_product_id']
+    (client_id) [name: 'idx_client_id']
+    wishlist_id [unique]
+  }
+}
+
+REf: clients.id < wishlist.client_id
